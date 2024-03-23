@@ -29,20 +29,6 @@ def view_students():
     for index, student in enumerate(students, 1):
         print(f"{index}. Name: {student['Name']}, Age: {student['Age']}, Grade: {student['Grade']}")
 
-def search_student():
-    if not students:
-        print("No students found.")
-        return
-    search_name = input("\nEnter student name to search: ")
-    found = False
-    for student in students:
-        if student['Name'].lower() == search_name.lower():
-            print(f"Student found - Name: {student['Name']}, Age: {student['Age']}, Grade: {student['Grade']}")
-            found = True
-            break
-    if not found:
-        print("Student not found.")
-
 def delete_student():
     if not students:
         print("No students found.")
